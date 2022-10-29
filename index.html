@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PETFIGHT</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Pet Fight!🔥💧🌱</h1>
+    </header>
+    <section id="select-pet">
+      <h2 class="subtitle">Choose your pet !</h2>
+      <div id="card-container-id" class="card-container"></div>
+
+      <button id="button-pet">Select your pet</button>
+    </section>
+
+    <section id="select-attack">
+      <h2 class="subtitle">Choose your attack</h2>
+      <div id="attack-btn-container" class="btn-container"></div>
+
+      <div id="message">
+        <p id="result">Good Luck🍀</p>
+        <section id="restart">
+          <button id="button-restart">Restart</button>
+        </section>
+      </div>
+
+      <div class="players-box-container">
+        <div class="game-box">
+          <p id="player-lives">0</p>
+          <div id="player-pet-img"></div>
+          <p id="pet-player"></p>
+          <div id="msg-player-attack"></div>
+        </div>
+
+        <div class="game-box">
+          <p id="enemy-lives">0</p>
+          <div id="enemy-pet-img"></div>
+          <p id="pet-enemy"></p>
+          <div id="msg-enemy-attack"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

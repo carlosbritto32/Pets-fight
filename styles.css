@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --yellow: #fbdf07;
+  --gray: #455d7a;
+  --black: #233142;
+  --red: #f95959;
+  --white: #f0f8ff;
+  --clear-white: #dee0d9;
+}
+
+body {
+  font-family: "Fredoka One", cursive;
+  background-color: var(--black);
+}
+
+/* PET SELECT SECTION AND VIEW */
+
+header {
+  width: 100%;
+  background-color: var(--gray);
+  border-radius: 0 0 50px 50px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: var(--yellow);
+  font-size: 40px;
+}
+
+#select-pet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subtitle {
+  color: var(--white);
+  margin: 30px 0 10px;
+  font-size: 30px;
+}
+
+.card-container {
+  margin: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-container input {
+  display: none;
+}
+
+input:checked + label {
+  background-color: var(--clear-white);
+}
+
+.pet-card {
+  font-size: 20px;
+  padding: 5px;
+  width: 180px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  border-radius: 20px;
+  color: var(--gray);
+  border: 2px solid var(--gray);
+  cursor: pointer;
+}
+
+.pet-card:hover {
+  background-color: var(--clear-white);
+}
+
+.pet-card img {
+  width: 80px;
+}
+
+#button-pet {
+  font-family: "Fredoka One", cursive;
+  font-size: 24px;
+  background: var(--gray);
+  color: var(--yellow);
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#button-pet:hover {
+  background-color: #7d9d9c;
+}
+
+/* ATTACK SETECT SECTION  */
+
+#select-attack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-attack {
+  font-family: "Fredoka One", cursive;
+  font-size: 24px;
+  background: var(--white);
+  color: var(--gray);
+  margin: 8px;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-attack:hover {
+  background-color: var(--clear-white);
+}
+
+#message {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 280px;
+  background: var(--gray);
+  color: var(--yellow);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#button-restart {
+  font-family: "Fredoka One", cursive;
+  font-size: 24px;
+  background: var(--red);
+  color: var(--white);
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#button-restart:hover {
+  background-color: palevioletred;
+}
+
+.players-box-container {
+  display: grid;
+  grid-template-columns: repeat(2, 220px);
+  justify-items: center;
+  margin: 20px 0;
+}
+
+.game-box {
+  width: 150px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--gray);
+  color: var(--white);
+  border-radius: 20px;
+}
+
+#player-pet-img img {
+  padding: 5px;
+  background-color: var(--white);
+  border-radius: 20px;
+  width: 70px;
+  border: 2px solid var(--black);
+}
+
+#enemy-pet-img img {
+  padding: 5px;
+  background-color: var(--white);
+  border-radius: 20px;
+  width: 70px;
+  border: 2px solid var(--black);
+}
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 360px) {
+  /* SELECT PET SECTION */
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 26px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* SELECT ATTACK SECTION */
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-attack {
+    margin: 5px;
+    width: 100px;
+  }
+
+  .players-box-container {
+    grid-template-columns: repeat(2, 160px);
+  }
+
+  .game-box {
+    width: 130px;
+  }
+}
